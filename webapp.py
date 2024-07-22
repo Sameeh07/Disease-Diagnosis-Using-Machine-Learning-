@@ -13,8 +13,8 @@ st.set_page_config(page_title="Health Assistant",
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Loading the saved models
-diabetes_model_path = os.path.join(working_dir, 'diabetesmodelnew.sav')
-heart_disease_model_path = os.path.join(working_dir, 'heart_model (1).sav')
+diabetes_model_path = os.path.join(working_dir, 'diabetes_model.sav')
+heart_disease_model_path = os.path.join(working_dir, 'heart_disease_model.sav')
 
 diabetes_model = pickle.load(open(diabetes_model_path, 'rb'))
 heart_disease_model = pickle.load(open(heart_disease_model_path, 'rb'))
