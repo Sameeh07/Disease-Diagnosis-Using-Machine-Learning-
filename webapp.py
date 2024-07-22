@@ -13,8 +13,8 @@ st.set_page_config(page_title="Health Assistant",
 
 # Loading the saved models
 
-diabetes_model = pickle.load(open(diabetes_model.sav, 'rb'))
-heart_disease_model = pickle.load(open(heart_disease_model.sav, 'rb'))
+diabetesmodel = pickle.load(open(diabetes_model.sav, 'rb'))
+heart_diseasemodel = pickle.load(open(heart_disease_model.sav, 'rb'))
 
 # Sidebar for navigation
 with st.sidebar:
@@ -72,7 +72,7 @@ if selected == 'Diabetes Prediction':
         user_input = convert_to_float(user_input)
         
         if user_input is not None:
-            diab_prediction = diabetes_model.predict([user_input])
+            diab_prediction = diabetesmodel.predict([user_input])
 
             if diab_prediction[0] == 1:
                 diab_diagnosis = 'The person is diabetic'
@@ -136,7 +136,7 @@ if selected == 'Heart Disease Prediction':
         user_input = convert_to_float(user_input)
         
         if user_input is not None:
-            heart_prediction = heart_disease_model.predict([user_input])
+            heart_prediction = heart_diseasemodel.predict([user_input])
 
             if heart_prediction[0] == 1:
                 heart_diagnosis = 'The person is having heart disease'
