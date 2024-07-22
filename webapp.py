@@ -9,15 +9,12 @@ st.set_page_config(page_title="Health Assistant",
                    layout="wide",
                    page_icon="🧑‍⚕️")
 
-# Getting the working directory of the main.py
-working_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 # Loading the saved models
-diabetes_model_path = os.path.join(working_dir, 'diabetes_model.sav')
-heart_disease_model_path = os.path.join(working_dir, 'heart_disease_model.sav')
 
-diabetes_model = pickle.load(open(diabetes_model_path, 'rb'))
-heart_disease_model = pickle.load(open(heart_disease_model_path, 'rb'))
+diabetes_model = pickle.load(open(diabetes_model.sav, 'rb'))
+heart_disease_model = pickle.load(open(heart_disease_model.sav, 'rb'))
 
 # Sidebar for navigation
 with st.sidebar:
