@@ -5,7 +5,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # Set page configuration
-st.set_page_config(page_title="Health Assistant",
+st.set_page_config(page_title="WIZBOT",
                    layout="wide",
                    page_icon="🧑‍⚕️")
 
@@ -18,7 +18,7 @@ heart_diseasemodel = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 # Sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('WIZBOT Disease Prediction System',
                            ['Diabetes Prediction', 'Heart Disease Prediction'],
                            icons=['activity', 'heart'],
                            default_index=0)
